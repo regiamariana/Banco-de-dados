@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\47425337800\\Documents\\c#\\fourteenthproject\\Senai.PastelStore.MVC\\Senai.PastelStore.MVC.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
