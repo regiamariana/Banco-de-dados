@@ -66,6 +66,24 @@ namespace Senai.Revisao.MVC.ViewController {
                     System.Console.WriteLine($"id {item.Id} - Nome {item.Nome}");
                 }
             }
-        }
+        }//Fim listar usuários
+        public static UsuarioViewModel EfetuarLogin(){
+            string email, senha;
+
+            System.Console.WriteLine("digite seu email");
+            email = Console.ReadLine();
+
+            System.Console.WriteLine("digite sua senha");
+            senha = Console.ReadLine();
+            
+            UsuarioViewModel usuarioRecuperado = usuarioRepositorio.BuscarUsuario(email, senha);
+
+            if (usuarioRecuperado != null)
+            {
+                return usuarioRecuperado;
+            }
+            System.Console.WriteLine("Usuário ou senha inválidos");
+            return null;
+        }//fim efetuar login
     }
 }

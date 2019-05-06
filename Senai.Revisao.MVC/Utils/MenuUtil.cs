@@ -12,5 +12,14 @@ namespace Senai.Revisao.MVC.Utils
             System.Console.WriteLine("------------------------------");
             
         }
+        public static void MenuLogado(){
+            System.Console.WriteLine("------------------------------");
+            System.Console.WriteLine("  1 - Cadastrar Produto       ");
+            System.Console.WriteLine("  2 - listar                  ");
+            System.Console.WriteLine("  3 - Efetuar Login           ");
+            System.Console.WriteLine("  0 - Sair                    ");
+            System.Console.WriteLine("------------------------------");
+            
+        }
     }
 }
