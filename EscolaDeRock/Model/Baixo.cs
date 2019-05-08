@@ -15,5 +15,7 @@ namespace EscolaDeRock.Model
             System.Console.WriteLine("Mantendo Ritmo como (0)", this.GetType().Name);
             return true;
         }
+
+        public void FazerTumDum(){}
     }
 }

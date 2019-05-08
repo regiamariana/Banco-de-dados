@@ -1,0 +1,11 @@
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\Lixoso\bin\Debug\netcoreapp2.1\Lixoso.deps.json
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\Lixoso\bin\Debug\netcoreapp2.1\Lixoso.runtimeconfig.json
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\Lixoso\bin\Debug\netcoreapp2.1\Lixoso.runtimeconfig.dev.json
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\Lixoso\bin\Debug\netcoreapp2.1\Lixoso.dll
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\Lixoso\bin\Debug\netcoreapp2.1\Lixoso.pdb
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\Lixoso\obj\Debug\netcoreapp2.1\Lixoso.csprojAssemblyReference.cache
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\Lixoso\obj\Debug\netcoreapp2.1\Lixoso.csproj.CoreCompileInputs.cache
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\Lixoso\obj\Debug\netcoreapp2.1\Lixoso.AssemblyInfoInputs.cache
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\Lixoso\obj\Debug\netcoreapp2.1\Lixoso.AssemblyInfo.cs
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\Lixoso\obj\Debug\netcoreapp2.1\Lixoso.dll
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\Lixoso\obj\Debug\netcoreapp2.1\Lixoso.pdb

@@ -1,0 +1,11 @@
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\LixosoCertoT-T\bin\Debug\netcoreapp2.1\LixosoCertoT-T.deps.json
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\LixosoCertoT-T\bin\Debug\netcoreapp2.1\LixosoCertoT-T.runtimeconfig.json
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\LixosoCertoT-T\bin\Debug\netcoreapp2.1\LixosoCertoT-T.runtimeconfig.dev.json
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\LixosoCertoT-T\bin\Debug\netcoreapp2.1\LixosoCertoT-T.dll
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\LixosoCertoT-T\bin\Debug\netcoreapp2.1\LixosoCertoT-T.pdb
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\LixosoCertoT-T\obj\Debug\netcoreapp2.1\LixosoCertoT-T.csprojAssemblyReference.cache
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\LixosoCertoT-T\obj\Debug\netcoreapp2.1\LixosoCertoT-T.csproj.CoreCompileInputs.cache
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\LixosoCertoT-T\obj\Debug\netcoreapp2.1\LixosoCertoT-T.AssemblyInfoInputs.cache
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\LixosoCertoT-T\obj\Debug\netcoreapp2.1\LixosoCertoT-T.AssemblyInfo.cs
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\LixosoCertoT-T\obj\Debug\netcoreapp2.1\LixosoCertoT-T.dll
+C:\Users\47425337800\Documents\c#\fourteenthproject\Banco-de-dados\LixosoCertoT-T\obj\Debug\netcoreapp2.1\LixosoCertoT-T.pdb
