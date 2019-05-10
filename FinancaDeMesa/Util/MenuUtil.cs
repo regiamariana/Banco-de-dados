@@ -10,8 +10,9 @@ namespace FinancaDeMesa.Util
             System.Console.WriteLine("           1 - cadastro de usuário           ");
             System.Console.WriteLine("           2 - login de usuário              ");
             System.Console.WriteLine("           0 - sair                          ");
-            System.Console.WriteLine("=============================================");
-        }
+            System.Console.WriteLine("=============================================");                                     
+            System.Console.WriteLine("Código");
+        } 
 
         public static void MenuLogado (){
             System.Console.WriteLine("=============================================");
@@ -24,6 +25,8 @@ namespace FinancaDeMesa.Util
             System.Console.WriteLine("           4 - exportar banco de dados       ");
             System.Console.WriteLine("           0 - sair                          ");
             System.Console.WriteLine("=============================================");
+            System.Console.WriteLine("Código");
+
         }
     }
 }
