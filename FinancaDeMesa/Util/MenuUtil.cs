@@ -28,5 +28,13 @@ namespace FinancaDeMesa.Util
             System.Console.WriteLine("Código");
 
         }
+
+        public static void EscolhaTransacao (){
+            System.Console.WriteLine("    Selecione o tipo de transação entre:   ");
+            System.Console.WriteLine("    1 - Despesa                            ");
+            System.Console.WriteLine("    2 - Receita                            ");
+            System.Console.WriteLine("    0 - sair                               ");
+            System.Console.WriteLine("Código                                     ");
+        }
     }
 }

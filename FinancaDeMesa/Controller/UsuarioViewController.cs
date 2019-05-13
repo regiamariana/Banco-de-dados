@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using FinancaDeMesa.Model;
 using FinancaDeMesa.Repositorio;
@@ -7,7 +8,7 @@ using FinancaDeMesa.Util;
 namespace FinancaDeMesa.Controller {
     public class UsuarioViewController {
 
-       static UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio();
+        static UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio ();
         public static void CadastrarUsuario () {
             string nome, email, senha, confirmacaoSenha;
 
@@ -48,19 +49,35 @@ namespace FinancaDeMesa.Controller {
             usuario.Data = DateTime.Now;
 
             //INSERIR USUÁRIO
-                usuarioRepositorio.Inserir(usuario);
+            usuarioRepositorio.Inserir (usuario);
 
-                
             //INSERIR USUÁRIO
 
             Console.ForegroundColor = ConsoleColor.Green;
-            System.Console.WriteLine("Cadastro realizado com sucesso");
-            Console.ResetColor();
+            System.Console.WriteLine ("Cadastro realizado com sucesso");
+            Console.ResetColor ();
 
         }
 
-        public static void LogarUsuario(){
-
+        public static UsuarioViewModel LogarUsuario () {
+            string email, senha;
+            do {
+                System.Console.Write ("Digite seu email: ");
+                email = Console.ReadLine ();
+                if (!ValidacaoUtil.ValidacaoEmail (email)) {
+                    System.Console.WriteLine ("Email Inválido..");
+                    Thread.Sleep (1200);
+                }
+            } while (!ValidacaoUtil.ValidacaoEmail (email));
+            System.Console.Write ("Digite sua senha: ");
+            senha = Console.ReadLine ();
+            UsuarioViewModel UserRecuperado = UsuarioRepositorio.TrazerUserLogado (email, senha);
+            if (UserRecuperado != null) {
+                return UserRecuperado;
+            } else {
+                return null;
+            }
         }
+
     }
 }

@@ -13,5 +13,11 @@ namespace FinancaDeMesa.Util {
             }
             return false;
         }
+
+        public static bool ValidacaoValor (double valor, double confirmaValor){
+            if(valor.Equals (confirmaValor)){
+                return true;
+            }return false;
+        }
     }
 }
