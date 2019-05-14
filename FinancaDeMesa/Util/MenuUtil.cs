@@ -31,8 +31,8 @@ namespace FinancaDeMesa.Util
 
         public static void EscolhaTransacao (){
             System.Console.WriteLine("    Selecione o tipo de transação entre:   ");
-            System.Console.WriteLine("    1 - Despesa                            ");
-            System.Console.WriteLine("    2 - Receita                            ");
+            System.Console.WriteLine("    Digite Despesa                         ");
+            System.Console.WriteLine("    Digite Receita                         ");
             System.Console.WriteLine("    0 - sair                               ");
             System.Console.WriteLine("Código                                     ");
         }

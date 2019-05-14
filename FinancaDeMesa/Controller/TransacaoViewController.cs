@@ -1,44 +1,32 @@
 using System;
 using FinancaDeMesa.Model;
+using FinancaDeMesa.Repositorio;
 using FinancaDeMesa.Util;
 
 namespace FinancaDeMesa.Controller {
     public class TransacaoViewController {
-        public void CadastrarTransacao () {
-            string tipoTransacao;
+        public static void CadastrarTransacao () {
             string descricao;
             double valor;
             double confirmaValor;
+            string tipoTransacao;
             DateTime dataTransacao;
-            
+
 
             MenuUtil.EscolhaTransacao ();
-            int respTransacao = int.Parse (Console.ReadLine ());
-            do {
+            tipoTransacao = Console.ReadLine();
 
-                switch (respTransacao) {
-                    case 1:
-                        tipoTransacao = "Despesa";
+            if (tipoTransacao == "0")
+            {
+                System.Console.WriteLine("volte sempre!");
 
-                        break;
+                //NÃO SEI COMO FAZER A PESSOA SAIR, VOLTAR AQUI MAIS TARDE
 
-                    case 2:
-                        tipoTransacao = "Receita";
+                //usar Exit() ou Close()
 
-                        break;
+            }
+           
 
-                    case 0:
-                        System.Console.WriteLine ("Volte sempre");
-                        tipoTransacao = null;
-
-                        break;
-                    default:
-                        System.Console.WriteLine ("Digite algo válido");
-                        tipoTransacao = null;
-                        break;
-
-                }
-            } while (!tipoTransacao.Equals(null));
             do {
 
                 System.Console.WriteLine ("Digite um valor");
@@ -56,7 +44,25 @@ namespace FinancaDeMesa.Controller {
                 System.Console.WriteLine("Insira algo válido");
             } }
             while (string.IsNullOrEmpty(descricao));
+
+            TransacaoViewModel transacao = new TransacaoViewModel ();
+
+            transacao.Descricao = descricao;
+            transacao.Valor = valor;
+            transacao.TipoTransacao = tipoTransacao;
+            transacao.DataTransacao = DateTime.Now;
+
+            //INSERIR USUÁRIO
+            TransacaoRepositorio.Inserir(transacao);
+
+            //INSERIR USUÁRIO
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            System.Console.WriteLine ("Cadastro realizado com sucesso");
+            Console.ResetColor ();
             
         }
+
+        
     }
 }

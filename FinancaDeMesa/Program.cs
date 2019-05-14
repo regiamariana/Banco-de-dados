@@ -37,6 +37,7 @@ namespace FinancaDeMesa {
                                 {
                                     case 1:
                                         //Cadastrar transações
+                                        TransacaoViewController.CadastrarTransacao();
                                         break;
                                     case 2:
                                         //Exibir Transaçõa Total

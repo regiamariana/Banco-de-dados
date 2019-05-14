@@ -43,6 +43,7 @@ namespace FinancaDeMesa.Repositorio {
 
                     usuario.Nome = dadosDoUsuario[0];
                     usuario.Email = dadosDoUsuario[1];
+                    
                     usuario.Senha = dadosDoUsuario[2];
                     usuario.Data = DateTime.Parse (dadosDoUsuario[3]);
 
