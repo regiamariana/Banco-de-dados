@@ -3,6 +3,7 @@ using FinancaDeMesa.Model;
 using FinancaDeMesa.Repositorio;
 using FinancaDeMesa.Util;
 
+
 namespace FinancaDeMesa.Controller {
     public class TransacaoViewController {
         public static void CadastrarTransacao () {
@@ -10,22 +11,13 @@ namespace FinancaDeMesa.Controller {
             double valor;
             double confirmaValor;
             string tipoTransacao;
-            DateTime dataTransacao;
 
 
             MenuUtil.EscolhaTransacao ();
             tipoTransacao = Console.ReadLine();
 
-            if (tipoTransacao == "0")
+            if (tipoTransacao == "Despesa"+ "Receita")
             {
-                System.Console.WriteLine("volte sempre!");
-
-                //NÃO SEI COMO FAZER A PESSOA SAIR, VOLTAR AQUI MAIS TARDE
-
-                //usar Exit() ou Close()
-
-            }
-           
 
             do {
 
@@ -61,7 +53,16 @@ namespace FinancaDeMesa.Controller {
             System.Console.WriteLine ("Cadastro realizado com sucesso");
             Console.ResetColor ();
             
-        }
+            }else if(tipoTransacao != "Despesa" + "Receita")
+            {
+                System.Console.WriteLine("Volte sempre");
+
+            }
+            }
+
+            
+
+           
 
         
     }

@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using FinancaDeMesa.Model;
+using Spire.Doc;
+using Spire.Doc.Documents;
 
 namespace FinancaDeMesa.Repositorio
 {
@@ -17,7 +19,7 @@ namespace FinancaDeMesa.Repositorio
 
             usuario.id = contador + 1; */
 
-            StreamWriter arquivo = new StreamWriter ("vacilo.csv", true);
+            StreamWriter arquivo = new StreamWriter ("transacoes.csv", true);
 
             arquivo.WriteLine ($"{transacao.TipoTransacao}; {transacao.Descricao}; {transacao.Valor}; {transacao.DataTransacao}");
             arquivo.Close ();
@@ -32,8 +34,8 @@ namespace FinancaDeMesa.Repositorio
         public static List<TransacaoViewModel> TrazerListaDeTransacoes () {
             List<TransacaoViewModel> ListaDeTransacoes = new List<TransacaoViewModel> ();
             TransacaoViewModel transacao;
-            string[] transacoes = File.ReadAllLines ("vacilo.csv");
-            if (!File.Exists ("vacilo.csv")) {
+            string[] transacoes = File.ReadAllLines ("transacoes.csv");
+            if (!File.Exists ("transacoes.csv")) {
                 return null;
             }
 
@@ -55,16 +57,31 @@ namespace FinancaDeMesa.Repositorio
             return ListaDeTransacoes;
         } // fim listar
 
+        public static void GerarDocWord(){
+            Document doc = new Document();
+            Section section = doc.AddSection();
+            Paragraph Paragrafo = section.AddParagraph();
+            var ListaUser = UsuarioRepositorio.TrazerListaDeUsuarios();
+            UsuarioViewModel usuario = new UsuarioViewModel();
+            for (int i = 0; i < ListaUser.Count; i++)
+            {
+                
+                Paragrafo.AppendText($"Nome: {usuario.Nome}")
+            }
+           
+            Paragrafo.AppendText("");
+            doc.SaveToFile("ExtratoTransações.docx", FileFormat.Docx);
+        }
 
         /* public static TransacaoViewModel TrazerTransacao (List<TransacaoViewModel> TrazerListaDeTransacoes){
             List<TransacaoViewModel> ListaDeTransacoes = TransacaoRepositorio.TrazerListaDeTransacoes();
 
-            foreach (var item in ListaUsuarios)
+            foreach (var  in ListaUsuarios)
             {
                 if (email.Equals(item.Email) && senha.Equals(item.Senha))
                 {
                     return item;
                 }
-            }return null; */
+            }return null;*/
         }
     }

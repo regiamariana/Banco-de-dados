@@ -5,20 +5,22 @@ using FinancaDeMesa.Model;
 
 namespace FinancaDeMesa.Repositorio {
     public class UsuarioRepositorio {
-        public UsuarioViewModel Inserir (UsuarioViewModel usuario) {
-            
-            /* int contador = 0;
-            if (ListaDeUsuarios != null)
+        public UsuarioViewModel Inserir (UsuarioViewModel usuario)
+        {
+
+            int contador = 0;
+            if (TrazerListaDeUsuarios() != null)
             {
-                contador = ListaDeUsuarios.Count;
+                contador = TrazerListaDeUsuarios().Count;
             }
 
-            usuario.id = contador + 1; */
+            usuario.Id = contador + 1;
 
-            StreamWriter arquivo = new StreamWriter ("sw.csv", true);
-
-            arquivo.WriteLine ($"{usuario.Nome};{usuario.Email};{usuario.Senha};{usuario.Data}");
-            arquivo.Close ();
+            using (var arquivo = new StreamWriter("usuarios.csv", true))
+            {
+                arquivo.WriteLine($" {usuario.Id} ;{usuario.Nome}; {usuario.Email}; {usuario.Senha}; {usuario.Data};");
+                arquivo.Close();
+            }
             return usuario;
 
             //MÉTODO EM CONSTRUÇÃO!!!!!!!!!!!
@@ -30,8 +32,8 @@ namespace FinancaDeMesa.Repositorio {
         public static List<UsuarioViewModel> TrazerListaDeUsuarios () {
             List<UsuarioViewModel> ListaDeUsuarios = new List<UsuarioViewModel> ();
             UsuarioViewModel usuario;
-            string[] usuarios = File.ReadAllLines ("sw.csv");
-            if (!File.Exists ("sw.csv")) {
+            string[] usuarios = File.ReadAllLines("usuarios.csv");
+            if (!File.Exists ("usuarios.csv")) {
                 return null;
             }
 
@@ -40,12 +42,12 @@ namespace FinancaDeMesa.Repositorio {
 
                     string[] dadosDoUsuario = item.Split (";");
                     usuario = new UsuarioViewModel ();
-
-                    usuario.Nome = dadosDoUsuario[0];
-                    usuario.Email = dadosDoUsuario[1];
+                    usuario.Id = int.Parse(dadosDoUsuario[0]);
+                    usuario.Nome = dadosDoUsuario[1];
+                    usuario.Email = dadosDoUsuario[2];
                     
-                    usuario.Senha = dadosDoUsuario[2];
-                    usuario.Data = DateTime.Parse (dadosDoUsuario[3]);
+                    usuario.Senha = dadosDoUsuario[3];
+                    usuario.Data = DateTime.Parse (dadosDoUsuario[4]);
 
                     ListaDeUsuarios.Add (usuario);
                 } //fim if null

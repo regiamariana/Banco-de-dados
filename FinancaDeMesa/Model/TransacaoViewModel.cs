@@ -5,6 +5,7 @@ namespace FinancaDeMesa.Model
     public class TransacaoViewModel
     {
 
+        
         public string TipoTransacao {get;set;}
         
         public string Descricao {get; set;}
