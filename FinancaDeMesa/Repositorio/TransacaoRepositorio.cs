@@ -63,11 +63,22 @@ namespace FinancaDeMesa.Repositorio
             Paragraph Paragrafo = section.AddParagraph();
             var ListaUser = UsuarioRepositorio.TrazerListaDeUsuarios();
             UsuarioViewModel usuario = new UsuarioViewModel();
-            for (int i = 0; i < ListaUser.Count; i++)
-            {
-                
-                Paragrafo.AppendText($"Nome: {usuario.Nome}")
-            }
+            var transacao = new TransacaoViewModel ();
+            Paragrafo.AppendText("                                                                 Relatório das Minhas Transações                                                  ");
+            // foreach (var item in ListaUser)
+            // {
+            //     if (item.Email.Equals(DadosUserLogado.Email) && item.Senha.Equals(DadosUserLogado.Senha) && item != null)
+            //     {
+                    //Escrever relatório das transações do user
+                    foreach (var user in ListaUser)
+                    {
+                        if (user.Id.Equals(transacao.IdUsuarioCriador) && user != null)
+                        {
+                            Paragrafo.AppendText($"Id Usuário Criador: {transacao.IdUsuarioCriador} - Tipo da Transação: {transacao.TipoTransacao} - Descrição: {transacao.Descricao} - Valor: {transacao.Valor} - Data da Transação: {transacao.DataTransacao}");
+                        }
+                    }
+            //     }
+            // }
            
             Paragrafo.AppendText("");
             doc.SaveToFile("ExtratoTransações.docx", FileFormat.Docx);

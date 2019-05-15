@@ -31,6 +31,7 @@ namespace FinancaDeMesa {
                             Console.ResetColor();
                             do
                             {
+                                Console.Clear();
                                 MenuUtil.MenuLogado();
                                 resposta = int.Parse(Console.ReadLine());
                                 switch (resposta)
@@ -40,6 +41,7 @@ namespace FinancaDeMesa {
                                         TransacaoViewController.CadastrarTransacao();
                                         break;
                                     case 2:
+                                        co
                                         //Exibir Transações Total - infos dee cada Transação
                                         break;
                                     case 3:
@@ -64,6 +66,8 @@ namespace FinancaDeMesa {
                         }
                         else
                         {
+                            System.Console.WriteLine("Usuário não encontrado...");
+                            Thread.Sleep(2000);
                             continue;
                         }
                         break;
